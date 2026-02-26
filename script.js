@@ -1,6 +1,8 @@
 // Set your daily Iftar time (24-hour format)
 let iftarHour = 18;   // 6 PM
-let iftarMinute = 1;  // 6:05 PM
+let iftarMinute = 2;  // 6:05 PM
+
+let soundPlayed = false; // Prevent repeating sound
 
 function updateCountdown() {
     let now = new Date();
@@ -27,6 +29,12 @@ function updateCountdown() {
     // Display
     document.getElementById("countdown").innerHTML =
         hours + "h : " + minutes + "m : " + seconds + "s ";
+
+    // 🔥 Play sound when time reaches 0
+    if (distance <= 1000 && !soundPlayed) {
+        document.getElementById("iftarSound").play();
+        soundPlayed = true;
+    }
 }
 
 // Update every 1 second
