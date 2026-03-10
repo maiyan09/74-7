@@ -1,6 +1,6 @@
 // Set your daily Iftar time (24-hour format)
 let iftarHour = 18;   // 6 PM
-let iftarMinute = 6;  // 6:05 PM
+let iftarMinute = 7;  // 6:05 PM
 
 let soundPlayed = false; // Prevent repeating sound
 
@@ -42,6 +42,7 @@ setInterval(updateCountdown, 1000);
 
 // Run once immediately
 updateCountdown();
+
 
 
 
